@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quizApp.css">
+</head>
+<body>
+    <div id="home">
+        <h1>QuizCraze</h1>
+        <label for="name">Enter your name to continue the Quiz:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button onclick="startQuiz()">Enter</button>
+    </div>
+
+    <div id="category" style="display: none;">
+        <h2>Select Category</h2>
+        <button onclick="loadQuiz('pipes')">Pipes and Cisterns</button>
+        <button onclick="loadQuiz('probability')">Probability</button>
+        <button onclick="loadQuiz('age')">Problems on Age</button>
+        <button onclick="loadQuiz('profit')">Profit and Loss</button>
+    </div>
+
+    <div id="quiz" style="display: none;">
+        <h2 id="quiz-category"></h2>
+        <p id="timer">Time Left: <span id="time">10</span> seconds</p>
+        <p id="question-number"></p>
+        <p id="question-text"></p>
+        <div id="options">
+            <button onclick="submitAnswer(1)" id="option1"></button>
+            <button onclick="submitAnswer(2)" id="option2"></button>
+            <button onclick="submitAnswer(3)" id="option3"></button>
+            <button onclick="submitAnswer(4)" id="option4"></button>
+        </div>
+        <button id="next-question" onclick="nextQuestion()" style="display: none;">Next Question</button>
+    </div>
+
+    <div id="result" style="display: none;">
+        <h2>Quiz Result</h2>
+        <p id="result-name"></p>
+        <p>Total Time Taken: <span id="total-time"></span> seconds</p>
+        <p>Total Questions: 10</p>
+        <p>Attempted: <span id="attempted"></span></p>
+        <p>Correct: <span id="correct"></span></p>
+        <p>Wrong: <span id="wrong"></span></p>
+        <p>Percentage: <span id="percentage"></span>%</p>
+        <button onclick="startAgain()">Start Again</button>
+        <button onclick="goHome()">Go to Home</button>
+    </div>
+
+    <script src="quizApp.js"></script>
+</body>
+</html>

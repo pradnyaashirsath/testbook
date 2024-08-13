@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 3em;
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#options button {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+#options button.correct {
+    background-color: #28a745;
+}
+
+#options button.wrong {
+    background-color: #dc3545;
+}
+
+#options button:hover {
+    background-color: #0056b3;
+}
+
+#next-question, #result button {
+    background-color: #FF5733;
+}
+
+#next-question:hover, #result button:hover {
+    background-color: #c63f23;
+}
+
+#result {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+}
